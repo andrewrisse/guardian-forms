@@ -2,6 +2,19 @@ language: node.js
 node_js:
   - 12
 
-script:
-  - npm install
-  - npm run build
+services:
+  - docker
+
+stages:
+  - build
+  - package
+
+jobs:
+  include:
+    - stage: build
+      script:
+        - npm install
+        - npm build
+    - stage: package
+      script:
+        - docker build -t nextjs/app -f Dockerfile .
