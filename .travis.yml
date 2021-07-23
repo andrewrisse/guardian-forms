@@ -18,7 +18,7 @@ jobs:
     - stage: package
       script:
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-        - docker build -t guardianForms -f Dockerfile .
-        - docker tag guardianForms andrewrisse/guardian-forms:latest
+        - docker build -t guardianforms -f Dockerfile .
+        - docker tag guardianforms andrewrisse/guardian-forms:latest
         - docker push andrewrisse/guardian-forms
 
