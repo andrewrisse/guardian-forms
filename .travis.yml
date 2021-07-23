@@ -7,16 +7,12 @@ services:
 
 stages:
   - build
-  - package
 
 jobs:
   include:
     - stage: build
-      script:
         - npm install
         - npm build
-    - stage: package
-      script:
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
         - docker build -t guardianforms -f Dockerfile .
         - docker tag guardianforms andrewrisse/guardian-forms:latest

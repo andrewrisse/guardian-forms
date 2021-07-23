@@ -38,9 +38,6 @@ B
 pages/_document.js,d/1/d1cd1638ed0f36c4f90ee49276b0ae25263a6f85
 6
 .npmrc,1/2/12453d06e6e35287172e482940b954ba12dc25a2
-:
-
-.env.local,1/f/1fa30fea3e9ae270a3c38a6113a3689d8987d108
 V
 &src/components/landing/ProductHero.tsx,1/8/184be32c8cd4ad788130f471535e73a93dbda593
 ?
