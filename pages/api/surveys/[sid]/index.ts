@@ -27,6 +27,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
 const getSurvey = async (req: NextApiRequest, res: NextApiResponse) => {
   const { sid } = req.query;
+  //@ts-ignore
   const userId = req.user.dodid;
 
   if (!sid) return res.status(400).send('Missing survey id');
@@ -45,6 +46,7 @@ const getSurvey = async (req: NextApiRequest, res: NextApiResponse) => {
 const updateSurvey = async (req: NextApiRequest, res: NextApiResponse) => {
   const { sid } = req.query;
   const updatedFields = req.body;
+  //@ts-ignore
   const userId = req.user.dodid;
 
   if (!sid) return res.status(400).send('Missing survey id');
@@ -70,6 +72,7 @@ const updateSurvey = async (req: NextApiRequest, res: NextApiResponse) => {
 
 const deleteSurvey = async (req: NextApiRequest, res: NextApiResponse) => {
   const { sid } = req.query;
+  //@ts-ignore
   const userId = req.user.dodid;
 
   if (!sid) return res.status(400).send('Missing survey id');

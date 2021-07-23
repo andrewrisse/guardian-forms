@@ -22,6 +22,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 };
 
 const deleteQuestion = async (req: NextApiRequest, res: NextApiResponse) => {
+  //@ts-ignore
   const userId = req.user.dodid;
 
   const { sid, qid } = req.query;
@@ -49,6 +50,7 @@ const deleteQuestion = async (req: NextApiRequest, res: NextApiResponse) => {
 };
 
 const updateQuestion = async (req: NextApiRequest, res: NextApiResponse) => {
+  //@ts-ignore
   const userId = req.user.dodid;
 
   const { sid, qid } = req.query;

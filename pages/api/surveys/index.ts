@@ -26,12 +26,14 @@ const getAllUsersSurveys = async (
   req: NextApiRequest,
   res: NextApiResponse
 ) => {
+  //@ts-ignore
   const surveys = await Survey.find({ ownerId: req.user.dodid });
 
   res.json(surveys);
 };
 
 const createSurvey = async (req: NextApiRequest, res: NextApiResponse) => {
+  //@ts-ignore
   const { dodid } = req.user;
   const { title, description, questions } = req.body;
 

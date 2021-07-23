@@ -17,4 +17,8 @@ jobs:
         - npm build
     - stage: package
       script:
-        - docker build -t nextjs/app -f Dockerfile .
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        - docker build -t guardianForms -f Dockerfile .
+        - docker tag guardianForms andrewrisse/guardian-forms:latest
+        - docker push andrewrisse/guardian-forms
+
