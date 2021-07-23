@@ -12,7 +12,7 @@ jobs:
   include:
     - stage: build
         - npm install
-        - npm build
+        - npm run build
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
         - docker build -t guardianforms -f Dockerfile .
         - docker tag guardianforms andrewrisse/guardian-forms:latest
