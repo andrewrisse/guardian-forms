@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, ListItem } from '@material-ui/core';
 import { matchPath } from 'react-router-dom';
 import { useRouter } from 'next/router';
-import Link from "@material-ui/core/Link";
+import Link from '@material-ui/core/Link';
 
 type NavItemProps = {
   href: string;
@@ -19,10 +19,7 @@ const NavItem: React.FC<NavItemProps> = ({
   const router = useRouter();
   const active = href
     ? !!matchPath(
-        {
-          path: href,
-          end: false
-        },
+        href,
         router.pathname
       )
     : false;

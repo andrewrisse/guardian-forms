@@ -1,10 +1,10 @@
 import React, {ReactNode, FC} from 'react';
 import clsx from 'clsx';
-import { withStyles } from '@material-ui/styles';
+import {makeStyles} from '@material-ui/styles';
 import Container from '@material-ui/core/Container';
 import theme from "../../theme/theme";
 
-const styles = () => ({
+const useStyles = makeStyles(() => ({
     root: {
         color: theme.palette.common.white,
         position: 'relative',
@@ -43,15 +43,15 @@ const styles = () => ({
         backgroundRepeat: 'no-repeat',
         zIndex: -2,
     },
-});
+}));
 
 type ProductHeroLayoutProps = {
     backgroundClassName: string,
     children: ReactNode,
-    classes: { [key: string]: any },
 }
 const ProductHeroLayout: FC<ProductHeroLayoutProps> = (props) => {
-    const { backgroundClassName, children, classes } = props;
+    const { backgroundClassName, children } = props;
+    const classes = useStyles();
 
     return (
         <section className={classes.root}>
@@ -67,4 +67,4 @@ const ProductHeroLayout: FC<ProductHeroLayoutProps> = (props) => {
 
 
 
-export default withStyles(styles)(ProductHeroLayout);
+export default ProductHeroLayout;

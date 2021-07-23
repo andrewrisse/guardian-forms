@@ -1,7 +1,6 @@
 import React from 'react';
 import { Provider as ReduxProvider } from 'react-redux';
 import cookie from 'cookie';
-import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -55,9 +54,4 @@ MyApp.getInitialProps = async (context) => {
   return {
     cookies: parseCookies(context?.ctx?.req)
   };
-};
-
-MyApp.propTypes = {
-  Component: PropTypes.elementType.isRequired,
-  pageProps: PropTypes.object.isRequired
 };

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { AppBar, Toolbar } from '@material-ui/core';
 import Logo from './Logo';
 
-const MainNavbar = (props) => (
+const MainNavbar = (props: any) => (
     <AppBar
         elevation={0}
         {...props}

@@ -1,7 +1,5 @@
 import { createTheme } from '@material-ui/core';
 import {green, grey, red} from '@material-ui/core/colors';
-import shadows from './shadows';
-
 
 
 const rawTheme = createTheme({
@@ -39,7 +37,7 @@ const rawTheme = createTheme({
     fontWeightMedium: 700, // Roboto Condensed
     // fontFamilySecondary: "'Roboto Condensed', sans-serif",
   },
-  shadows
+
 });
 
 const fontHeader = {
