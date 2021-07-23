@@ -17,4 +17,14 @@ const Home = () => {
   );
 };
 
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const client = await connectToDatabase();
+  const isConnected = client ? true : false;
+
+  return {
+      props: { isConnected }
+  };
+}
+
+
 export default Home;

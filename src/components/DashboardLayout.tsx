@@ -2,8 +2,7 @@ import React, {ReactNode, useState} from 'react';
 import { styled } from '@material-ui/core';
 import DashboardNavbar from '../components/DashboardNavbar';
 import DashboardSidebar from '../components/DashboardSidebar';
-import {GetServerSidePropsContext} from "next";
-import connectToDatabase from "../../util/mongodb";
+
 
 const DashboardLayoutRoot = styled('div')(
     ({ theme }) => ({
@@ -64,14 +63,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({children}) => {
     );
 };
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
-    const client = await connectToDatabase();
-    const isConnected = client ? true : false;
 
-    return {
-        props: { isConnected }
-    };
-}
 
 
 export default DashboardLayout;

@@ -42,6 +42,7 @@ export default function MyApp(props) {
   );
 }
 
+
 function parseCookies(req) {
   if (!req || !req.headers) {
     return {};

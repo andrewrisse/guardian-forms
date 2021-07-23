@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import { withStyles } from '@material-ui/styles';
 import theme from '../../theme/theme';
 import ProductHeroLayout from './ProductHeroLayout';
-
+import { Typography } from '@material-ui/core';
 import { Button } from '@material-ui/core';
-import Typography from '../Typography';
+
 
 const backgroundImage =
   'https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1970&q=80';
@@ -52,10 +52,10 @@ const ProductHero: FC<ProductHeroTypes> = (props) => {
         src={backgroundImage}
         alt="increase priority"
       />
-      <Typography variant="h2" marked="center" classes={classes.h2}>
+      <Typography>
         A Survey Tool
       </Typography>
-      <Typography variant="h5" classes={classes.h5} >
+      <Typography>
         Create, Share, Analyze
       </Typography>
       <Button
