@@ -21,8 +21,6 @@ M
 src/components/MainLayout.tsx,3/b/3b34df12373591010759efee08d2be229aecd92b
 E
 __mocks__/fileMock.js,f/2/f269532d6cf5e20844f62d1d728a42bbeb33b962
-9
-	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 \
 ,src/components/landing/ProductHeroLayout.tsx,9/0/9076cd175bf0729a0692322cceb338c0bf6d47c8
 L

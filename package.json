@@ -35,6 +35,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "test" : "echo \"no tests\"",
     "start": "next start",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   },
