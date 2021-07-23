@@ -82,12 +82,8 @@ L
 src/hooks/useIsMountedRef.ts,7/2/723c15c51e8f028ad8116494b0ef0b8df309665f
 I
 pages/dashboard/index.tsx,a/f/affc8a6ebca5a7fc5e1af96e1660275e60682ea3
-P
- pages/api/surveys/[sid]/index.ts,3/e/3e6d1f27740691bc1edac30ecb2493cffda76251
 H
 src/redux/rootReducer.ts,a/b/abcc9ac406db3e317ca3594cd76a6063b6513c47
-O
-pages/dashboard/surveys/new.tsx,f/a/fac7a23c7594fc89ec8abad23c61818060f06470
 >
 lib/useUser.ts,b/f/bf399b4b1cad7d9d06cbb6a8f406ed23670b347e
 @

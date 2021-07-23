@@ -18,7 +18,7 @@ const NewSurvey = () => (
         }}
       >
         <Container maxWidth={false}>
-          <NewSurveyForm isEdit={true}/>
+          <NewSurveyForm />
         </Container>
       </Box>
     </DashboardLayout>
