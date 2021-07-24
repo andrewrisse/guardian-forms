@@ -3,6 +3,8 @@ import Box from '@material-ui/core/Box';
 import Copyright from '../src/components/Copyright';
 import AppAppBar from '../src/components/AppAppBar';
 import ProductHero from '../src/components/landing/ProductHero';
+import {GetServerSidePropsContext} from "next";
+import connectToDatabase from "../util/mongodb";
 
 const Home = () => {
   return (
@@ -18,12 +20,12 @@ const Home = () => {
 };
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const client = await connectToDatabase();
-  const isConnected = client ? true : false;
+    const client = await connectToDatabase();
+    const isConnected = client ? true : false;
 
-  return {
-      props: { isConnected }
-  };
+    return {
+        props: { isConnected }
+    };
 }
 
 
